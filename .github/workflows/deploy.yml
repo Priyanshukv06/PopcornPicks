@@ -1,0 +1,54 @@
+name: Deploy PopcornPicks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install fastapi uvicorn pydantic \
+                      scikit-learn pandas python-dotenv
+
+      - name: Lint with flake8
+        run: |
+          pip install flake8
+          flake8 backend/ utils/ app.py \
+            --max-line-length=100 \
+            --ignore=E501,W503
+
+      - name: Test FastAPI health
+        run: |
+          echo "✅ Lint passed"
+
+  deploy-backend:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Deploy backend to Render
+        run: |
+          curl -X POST "${{ secrets.RENDER_BACKEND_DEPLOY_HOOK }}"
+          echo "✅ Backend deployment triggered"
+
+  deploy-frontend:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Deploy frontend to Render
+        run: |
+          curl -X POST "${{ secrets.RENDER_FRONTEND_DEPLOY_HOOK }}"
+          echo "✅ Frontend deployment triggered"

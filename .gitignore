@@ -1,4 +1,21 @@
+# Secrets
 .env
-*.pkl
+auth_config.yaml
+
+# Data files (too large for GitHub)
+tmdb_5000_movies.csv
+tmdb_5000_credits.csv
+embeddings.pkl
+similarity.pkl
+
+# Python
 __pycache__/
-.DS_Store
+*.pyc
+venv/
+*.egg-info/
+
+# DB
+*.db
+
+# Jupyter
+.ipynb_checkpoints/

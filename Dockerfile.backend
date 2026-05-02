@@ -1,0 +1,21 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Install dependencies first (cached layer)
+COPY requirements.txt .
+RUN pip install --no-cache-dir \
+    fastapi uvicorn sentence-transformers \
+    torch scikit-learn pandas pydantic \
+    python-dotenv sqlalchemy bcrypt
+
+# Copy only backend code + model files
+COPY backend/ ./backend/
+COPY movie_list.pkl .
+COPY similarity.pkl .
+COPY embeddings.pkl .
+COPY .env .
+
+EXPOSE 8000
+
+CMD ["uvicorn", "backend.main:app", "--host", "0.0.0.0", "--port", "8000"]
