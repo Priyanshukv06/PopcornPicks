@@ -2,9 +2,9 @@
 
 > Your personalized movie discovery platform powered by AI. Find your next favorite film in seconds!
 
-[![Live Site](https://img.shields.io/badge/🌐_Live-popcornpicks--frontend.onrender.com-blue?style=for-the-badge)](https://popcornpicks-frontend.onrender.com)
-[![Backend API](https://img.shields.io/badge/API-popcornpicks_backend-green?style=for-the-badge)](https://popcornpicks-backend.onrender.com)
-[![API Docs](https://img.shields.io/badge/Swagger-Docs-orange?style=for-the-badge)](https://popcornpicks-backend.onrender.com/docs)
+[![Live Site](https://img.shields.io/badge/🌐_Live-popcornpicks--frontend--154l.onrender.com-blue?style=for-the-badge)](https://popcornpicks-frontend-154l.onrender.com)
+[![Backend API](https://img.shields.io/badge/API-popcornpicks_backend--pa5m-green?style=for-the-badge)](https://popcornpicks-backend-pa5m.onrender.com)
+[![API Docs](https://img.shields.io/badge/Swagger-Docs-orange?style=for-the-badge)](https://popcornpicks-backend-pa5m.onrender.com/docs)
 
 ---
 
@@ -38,9 +38,9 @@
 The system analyzes movies by **genre, cast, crew, and community ratings** to suggest films you'll love.
 
 ### Live Demo
-- **Frontend**: [https://popcornpicks-frontend.onrender.com](https://popcornpicks-frontend.onrender.com)
-- **Backend API**: [https://popcornpicks-backend.onrender.com](https://popcornpicks-backend.onrender.com)
-- **Swagger Docs**: [https://popcornpicks-backend.onrender.com/docs](https://popcornpicks-backend.onrender.com/docs)
+- **Frontend**: [https://popcornpicks-frontend-154l.onrender.com](https://popcornpicks-frontend-154l.onrender.com)
+- **Backend API**: [https://popcornpicks-backend-pa5m.onrender.com](https://popcornpicks-backend-pa5m.onrender.com)
+- **Swagger Docs**: [https://popcornpicks-backend-pa5m.onrender.com/docs](https://popcornpicks-backend-pa5m.onrender.com/docs)
 
 ---
 
@@ -84,7 +84,7 @@ The system analyzes movies by **genre, cast, crew, and community ratings** to su
 ```
 ┌─────────────────────────────────────────────────────────┐
 │               Frontend (Streamlit)                       │
-│   https://popcornpicks-frontend.onrender.com           │
+│   https://popcornpicks-frontend-154l.onrender.com      │
 ├────────────────────────────────────────────────────────┤
 │  Pages:                                                 │
 │  • 🏠 Home      → Search & Recommendations              │
@@ -96,7 +96,7 @@ The system analyzes movies by **genre, cast, crew, and community ratings** to su
                        ▼
 ┌─────────────────────────────────────────────────────────┐
 │            Backend (FastAPI)                            │
-│   https://popcornpicks-backend.onrender.com            │
+│   https://popcornpicks-backend-pa5m.onrender.com       │
 ├────────────────────────────────────────────────────────┤
 │  Endpoints:                                             │
 │  • POST /recommend    → Get similar movies              │
@@ -190,7 +190,7 @@ PopcornPicks/
 ## 🚀 Quick Start
 
 ### Option 1: Live Demo (No Setup Required!)
-Simply visit: **[https://popcornpicks-frontend.onrender.com](https://popcornpicks-frontend.onrender.com)**
+Simply visit: **[https://popcornpicks-frontend-154l.onrender.com](https://popcornpicks-frontend-154l.onrender.com)**
 
 **Demo Credentials:**
 - Username: `priyanshu`
@@ -293,7 +293,7 @@ streamlit cache clear
 
 ### Base URL
 - **Local**: `http://localhost:8000`
-- **Production**: `https://popcornpicks-backend.onrender.com`
+- **Production**: `https://popcornpicks-backend-pa5m.onrender.com`
 
 ### Endpoints
 
@@ -374,7 +374,7 @@ Response:
 ```
 
 ### Interactive API Explorer
-Visit Swagger UI: **[https://popcornpicks-backend.onrender.com/docs](https://popcornpicks-backend.onrender.com/docs)**
+Visit Swagger UI: **[https://popcornpicks-backend-pa5m.onrender.com/docs](https://popcornpicks-backend-pa5m.onrender.com/docs)**
 
 ---
 
@@ -496,7 +496,7 @@ sqlite> SELECT COUNT(*) FROM watchlist;
 Build Command: pip install -r requirements.txt
 Start Command: streamlit run app.py --server.port 10000
 Environment:
-  BACKEND_URL=https://popcornpicks-backend.onrender.com
+  BACKEND_URL=https://popcornpicks-backend-pa5m.onrender.com
   DATABASE_URL=postgresql://...
 ```
 
